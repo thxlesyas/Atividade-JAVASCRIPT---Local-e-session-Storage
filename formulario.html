@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário - Therf Store</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1>Cadastro</h1>
+
+        <form class="formulario" id="formulario">
+            <div class="campo largo">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            </div>
+
+            <div class="campo largo">
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro" required>
+            </div>
+
+            <div class="campo">
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" name="cep" placeholder="xx.xxx-xxx" data-mascara="cep"
+                    inputmode="numeric" maxlength="10" pattern="\d{2}\.\d{3}-\d{3}" required>
+            </div>
+
+            <div class="campo">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf" placeholder="xxx.xxx.xxx-xx" data-mascara="cpf"
+                    inputmode="numeric" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+            </div>
+
+            <div class="campo">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="+55 (xx) x xxxx-xxxx"
+                    data-mascara="telefone" inputmode="numeric" maxlength="20"
+                    pattern="\+55 \(\d{2}\) \d \d{4}-\d{4}" required>
+            </div>
+
+            <div class="campo">
+                <label for="cnpj">CNPJ</label>
+                <input type="text" id="cnpj" name="cnpj" placeholder="xx.xxx.xxx/xxxx-xx" data-mascara="cnpj"
+                    inputmode="numeric" maxlength="18" pattern="\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}" required>
+            </div>
+
+            <button type="submit" class="largo">Enviar</button>
+        </form>
+    </main>
+
+    <script src="formulario.js"></script>
+</body>
+
+</html>

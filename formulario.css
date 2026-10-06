@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eaf1ff;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 57, 255, 0.15);
+}
+
+h1 {
+    color: #0039ff;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.largo {
+    grid-column: 1 / -1;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-weight: bold;
+    color: #0039ff;
+}
+
+input {
+    padding: 12px;
+    border: 2px solid #c9d6ff;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff9900;
+}
+
+input:not(:placeholder-shown):invalid {
+    border-color: #e53935;
+}
+
+button {
+    background-color: #ff9900;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0039ff;
+}
+
+@media (max-width: 600px) {
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 25px;
+    }
+}
+
+/* página de dados */
+.dados {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.dados div {
+    background-color: #f7f9ff;
+    border-radius: 10px;
+    padding: 12px 15px;
+}
+
+.dados div:nth-child(-n+2) {
+    grid-column: 1 / -1;
+}
+
+.dados dt {
+    font-weight: bold;
+    color: #0039ff;
+    margin-bottom: 4px;
+}
+
+.dados dd {
+    word-break: break-word;
+}
+
+.vazio {
+    text-align: center;
+    color: #555;
+}
+
+.acoes {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.acoes .botao,
+.acoes button {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    background-color: #0039ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.acoes button {
+    background-color: #ff9900;
+}
+
+.acoes .botao:hover,
+.acoes button:hover {
+    filter: brightness(0.9);
+}
+
+@media (max-width: 600px) {
+    .dados {
+        grid-template-columns: 1fr;
+    }
+
+    .acoes {
+        flex-direction: column;
+    }
+}

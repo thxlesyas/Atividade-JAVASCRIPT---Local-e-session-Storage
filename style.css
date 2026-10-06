@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+}
+
+
+.cabecalho {
+    width: 100%;
+    height: 90px;
+    padding: 0 50px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.logo img {
+    width: 150px;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #0039ff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #ff9900;
+}
+
+.botao-header {
+    text-decoration: none;
+    background-color: #ff9900;
+    color: #ffffff;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-header:hover {
+    background-color: #0039ff;
+}
+
+.hero {
+    min-height: 100vh;
+    padding: 120px 8% 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #ffffff 45%, #eaf1ff 45%);
+}
+
+.hero-texto {
+    width: 50%;
+}
+
+.hero-texto h1 {
+    font-size: 64px;
+    color: #0039ff;
+    margin-bottom: 10px;
+}
+
+.hero-texto h2 {
+    font-size: 34px;
+    color: #ff9900;
+    margin-bottom: 25px;
+}
+
+.hero-texto p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 550px;
+}
+
+.botao-cta {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ff9900;
+    color: white;
+    padding: 16px 34px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-cta:hover {
+    background-color: #0039ff;
+    transform: scale(1.05);
+}
+
+.hero-imagem {
+    width: 45%;
+    text-align: center;
+}
+
+.hero-imagem img {
+    max-width: 100%;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+
+/* animação de flutuar muito foda */
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.produtos {
+    min-height: 100vh;
+    padding: 120px 8% 80px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.produtos h2 {
+    font-size: 42px;
+    color: #0039ff;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+.cards-produtos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 57, 255, 0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: #0039ff;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.card span {
+    display: block;
+    font-size: 22px;
+    color: #ff9900;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.botao-card {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #0039ff;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-card:hover {
+    background-color: #ff9900;
+}
+
+.beneficios {
+    min-height: 100vh;
+    padding: 120px 8% 80px;
+    background: linear-gradient(135deg, #0039ff, #005eff);
+    color: white;
+    text-align: center;
+}
+
+.beneficios h2 {
+    font-size: 42px;
+    margin-bottom: 60px;
+}
+
+.beneficios-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.beneficio {
+    width: 280px;
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 35px 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+.beneficio:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.icone {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.beneficio h3 {
+    font-size: 24px;
+    color: #ffcc33;
+    margin-bottom: 15px;
+}
+
+.beneficio p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.sobre {
+    min-height: 70vh;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f9ff;
+    text-align: center;
+}
+
+.sobre-conteudo {
+    max-width: 800px;
+}
+
+.sobre h2 {
+    font-size: 40px;
+    color: #0039ff;
+    margin-bottom: 25px;
+}
+
+.sobre p {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #444;
+}
+
+.rodape {
+    background-color: #111;
+    color: #ffffff;
+    padding: 50px 8% 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.rodape h3 {
+    color: #ff9900;
+    margin-bottom: 10px;
+}
+
+.rodape p {
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* botão de tema */
+.botao-tema {
+    background: none;
+    border: 2px solid #0039ff;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-tema:hover {
+    transform: rotate(20deg) scale(1.1);
+    border-color: #ff9900;
+}
+
+/* tema escuro */
+body,
+.cabecalho,
+.produtos,
+.card,
+.sobre {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.escuro {
+    background-color: #0f1220;
+    color: #e8eaf2;
+}
+
+body.escuro .cabecalho {
+    background-color: #161a2e;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+body.escuro .menu a {
+    color: #6f93ff;
+}
+
+body.escuro .menu a:hover {
+    color: #ff9900;
+}
+
+body.escuro .botao-tema {
+    border-color: #6f93ff;
+}
+
+body.escuro .hero {
+    background: linear-gradient(135deg, #0f1220 45%, #1a2140 45%);
+}
+
+body.escuro .hero-texto h1,
+body.escuro .produtos h2,
+body.escuro .sobre h2,
+body.escuro .card h3 {
+    color: #6f93ff;
+}
+
+body.escuro .produtos {
+    background-color: #0f1220;
+}
+
+body.escuro .subtitulo,
+body.escuro .card p {
+    color: #b5bad0;
+}
+
+body.escuro .card {
+    background-color: #1a2038;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+body.escuro .sobre {
+    background-color: #131830;
+}
+
+body.escuro .sobre p {
+    color: #c5c9dc;
+}
+
+body.escuro .rodape {
+    background-color: #070912;
+}
+
+.acoes-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
